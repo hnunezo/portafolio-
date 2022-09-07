@@ -1,0 +1,13 @@
+.nav {
+  background-color: black;
+  color: white;
+  width: calc(100vw);
+  border-bottom: 5px solid #71ff3d;
+  z-index: 3;
+  position: sticky;
+}
+
+.link {
+  font-style: none;
+  color: white;
+}

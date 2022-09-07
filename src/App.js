@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from "react";
+import NavbarHome from "./components/Navbar/NavbarHome";
+import ParticlesBackground from "./components/Particles/ParticlesBackground";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 
-function App() {
+const App = () => {
+  const homeRef = useRef();
+  const navRef = useRef();
+  const aboutRef = useRef();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ParticlesBackground homeRef={homeRef} />
+      <div>
+        <i
+          className="arrow down button"
+          onClick={() => navRef.current.scrollIntoView()}
+        ></i>
+      </div>
+      <NavbarHome navRef={navRef} homeRef={homeRef} aboutRef={aboutRef} />
+      <About aboutRef={aboutRef} />
+      <Skills />
     </div>
   );
-}
+};
 
 export default App;
