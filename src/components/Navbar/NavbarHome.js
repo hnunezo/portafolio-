@@ -3,7 +3,13 @@ import "./navstyles.css";
 
 const NavbarHome = ({ navRef, homeRef, aboutRef }) => {
   return (
-    <div>
+    <div
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 999,
+      }}
+    >
       <Navbar className={`nav`} variant="dark" ref={navRef}>
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
