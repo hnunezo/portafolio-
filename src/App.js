@@ -5,6 +5,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Moreme from "./components/MoreMe/Moreme";
 
 const App = () => {
   const homeRef = useRef();
@@ -23,6 +25,8 @@ const App = () => {
       <NavbarHome navRef={navRef} homeRef={homeRef} aboutRef={aboutRef} />
       <About aboutRef={aboutRef} />
       <Skills />
+      <Projects />
+      <Moreme />
     </div>
   );
 };

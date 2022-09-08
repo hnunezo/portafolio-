@@ -7,7 +7,7 @@ const NavbarHome = ({ navRef, homeRef, aboutRef }) => {
       style={{
         position: "sticky",
         top: 0,
-        zIndex: 999,
+        zIndex: 3,
       }}
     >
       <Navbar className={`nav`} variant="dark" ref={navRef}>

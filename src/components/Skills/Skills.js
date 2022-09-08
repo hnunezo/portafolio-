@@ -1,4 +1,5 @@
 import React from "react";
+import Section from "../stateless/Section";
 
 const Skills = () => {
   const skillsArray = [
@@ -14,19 +15,12 @@ const Skills = () => {
     "stackoverflow",
   ];
   return (
-    <div
-      style={{
-        height: "91vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Section>
       <div className="row text-center justify-content-evenly gap-1">
         <h2 className="col-12">SKILLS</h2>
         {skillsArray.map((el) => (
           <div
+            key={el}
             className="col-4 col-md-2"
             style={{
               display: "flex",
@@ -54,7 +48,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
