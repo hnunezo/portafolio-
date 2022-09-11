@@ -2,7 +2,7 @@
   background-color: black;
   color: white;
   width: calc(100vw);
-  border-bottom: 5px solid #71ff3d;
+  border-bottom: 5px solid #e31b6d;
   z-index: 3;
   position: sticky;
 }
@@ -10,4 +10,19 @@
 .link {
   font-style: none;
   color: white;
+  transition: ease 0.3s;
+}
+
+.link:hover {
+  color: #e31b6d;
+}
+
+.pink-color {
+  background: linear-gradient(to right, #e31b6d 50%, white 50%);
+  border-left: solid 5px #e31b6d;
+}
+
+.cyan-color {
+  background: linear-gradient(to right, #04c2c9 50%, white 50%);
+  border-left: solid 5px #04c2c9;
 }

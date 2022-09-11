@@ -7,7 +7,7 @@
 }
 
 .arrow {
-  border: solid white;
+  border: solid #e31b6d;
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 10px;

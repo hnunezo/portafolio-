@@ -6,6 +6,32 @@
   display: flex;
   justify-content: space-between;
 }
+.pink-color2 {
+  border-left: solid 5px #e31b6d;
+}
+
+.cyan-color2 {
+  border-left: solid 5px #04c2c9;
+}
+
+.icon-pink {
+  color: #e31b6d;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.icon-pink:hover {
+  color: #04c2c9;
+}
+
+.icon-cyan {
+  color: #04c2c9;
+  cursor: pointer;
+}
+
+.icon-cyan:hover {
+  color: #e31b6d;
+}
 
 @media (max-width: 992px) {
   .mycard {

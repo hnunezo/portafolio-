@@ -11,7 +11,7 @@ const About = ({ aboutRef }) => {
         className="row text-center justify-content-center gap-4 my-4"
         ref={aboutRef}
       >
-        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2">
+        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2 pink-color">
           <Text>
             <h2>Where does it come from?</h2>
             <p>
@@ -23,7 +23,7 @@ const About = ({ aboutRef }) => {
             </p>
           </Text>
         </Card>
-        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2">
+        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2 cyan-color">
           <Text>
             <h2>Where does it come from?</h2>
             <p>
@@ -35,7 +35,7 @@ const About = ({ aboutRef }) => {
             </p>
           </Text>
         </Card>
-        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2">
+        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2 pink-color">
           <Text>
             <h2>Where does it come from?</h2>
             <p>
@@ -47,7 +47,7 @@ const About = ({ aboutRef }) => {
             </p>
           </Text>
         </Card>
-        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2">
+        <Card className="col-10 col-sm-10 col-md-4 col-xxl-2 cyan-color">
           <Text>
             <h2>Where does it come from?</h2>
             <p>

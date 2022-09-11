@@ -12,32 +12,26 @@ const NavbarHome = ({ navRef, homeRef, aboutRef }) => {
     >
       <Navbar className={`nav`} variant="dark" ref={navRef}>
         <Container>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="m-auto">
-              <Nav.Link
-                onClick={() => homeRef.current.scrollIntoView()}
-                className="link"
-              >
-                HOME
-              </Nav.Link>
-              <Nav.Link
-                className="link"
-                onClick={() => aboutRef.current.scrollIntoView()}
-              >
-                ABOUT
-              </Nav.Link>
-              <Nav.Link href="#skills" className="link">
-                SKILLS
-              </Nav.Link>
-              <Nav.Link href="#projects" className="link">
-                PROJECTS
-              </Nav.Link>
-              <Nav.Link href="#contact" className="link">
-                CONTACT
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+          <Nav className="mx-auto">
+            <Nav.Link onClick={() => homeRef.current.scrollIntoView()}>
+              <p className="link">HOME</p>
+            </Nav.Link>
+            <Nav.Link
+              className="link"
+              onClick={() => aboutRef.current.scrollIntoView()}
+            >
+              <p className="link">ABOUT</p>
+            </Nav.Link>
+            <Nav.Link href="#skills" className="link">
+              <p className="link">SKILLS</p>
+            </Nav.Link>
+            <Nav.Link href="#projects" className="link">
+              <p className="link">PROJECTS</p>
+            </Nav.Link>
+            <Nav.Link href="#contact" className="link">
+              <p className="link">CONTACT</p>
+            </Nav.Link>
+          </Nav>
         </Container>
       </Navbar>
     </div>
