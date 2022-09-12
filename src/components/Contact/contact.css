@@ -24,6 +24,7 @@
 .buttonForm::before,
 .buttonForm::after {
   background: #04c2c9;
+  color: #e31b6d;
   content: " ";
   position: absolute;
   z-index: -1;
@@ -52,4 +53,5 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 1;
 }

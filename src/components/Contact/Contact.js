@@ -2,9 +2,12 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import InputStyled from "../stateless/input/InputStyled";
 import "./contact.css";
+import { useDispatch } from "react-redux";
+import { reset } from "../../state/formSlice";
 
 const Contact = () => {
   const form = useRef();
+  const dispatch = useDispatch();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,6 +20,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          dispatch(reset());
           form.current.reset();
         },
         (error) => {
@@ -37,7 +41,7 @@ const Contact = () => {
         }}
       >
         <InputStyled type={"text"} name="name" />
-        <InputStyled type={"text"} name="email" />
+        <InputStyled type={"email"} name="email" />
         <InputStyled type={"textarea"} name="message" />
 
         <button

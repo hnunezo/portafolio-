@@ -21,6 +21,7 @@
   border: 5px solid black;
   border-radius: 50%;
   transition: ease;
+  z-index: 2;
 }
 .button-up:hover {
   background-color: black;
