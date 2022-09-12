@@ -24,6 +24,7 @@ const App = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "black",
         }}
       >
         <ParticlesBackground homeRef={homeRef} />
@@ -36,11 +37,21 @@ const App = () => {
         ></i>
       </div>
       <NavbarHome navRef={navRef} homeRef={homeRef} aboutRef={aboutRef} />
-      <About aboutRef={aboutRef} />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Moreme />
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <About aboutRef={aboutRef} />
+        <Skills />
+        <Projects />
+        <Moreme />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

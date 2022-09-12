@@ -8,6 +8,7 @@ const NavbarHome = ({ navRef, homeRef, aboutRef }) => {
         position: "sticky",
         top: 0,
         zIndex: 3,
+        width: "100%",
       }}
     >
       <Navbar className={`nav`} variant="dark" ref={navRef}>

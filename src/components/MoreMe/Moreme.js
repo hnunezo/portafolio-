@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../stateless/Section";
+import Section from "../stateless/section/Section";
 
 const Moreme = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../stateless/Section";
+import Section from "../stateless/section/Section";
 import { Card7o } from "../stateless/Card";
 import Text from "../stateless/Text";
 import "./projects.css";

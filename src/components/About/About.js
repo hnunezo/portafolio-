@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "../stateless/Card";
-import Section from "../stateless/Section";
+import Section from "../stateless/section/Section";
 import Text from "../stateless/Text";
 
 const About = ({ aboutRef }) => {

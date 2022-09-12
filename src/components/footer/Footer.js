@@ -7,7 +7,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="container-footer-page">
+    <div style={{ width: "100%" }}>
       <button
         className="button-up"
         onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
