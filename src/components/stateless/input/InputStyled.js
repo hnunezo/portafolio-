@@ -6,9 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 const InputStyled = ({ type, name }) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.form);
-
-  console.log(state);
-
   return (
     <div>
       {name === "name" ? (

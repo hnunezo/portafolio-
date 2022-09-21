@@ -1,85 +1,78 @@
 import React from "react";
 import Section from "../stateless/section/Section";
-import { Card7o } from "../stateless/Card";
-import Text from "../stateless/Text";
 import "./projects.css";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import Button from "../stateless/Button";
+import FlipCard from "./FlipCard";
 
-const Projects = () => {
+const Projects = ({ projectsRef }) => {
   return (
-    <Section className="containerSec">
-      <h2 className="align-self-center">PROJECTS</h2>
-      <div className="row justify-content-center gap-5 my-4">
-        <Card7o className="col-10 col-md-5 mycard pink-color2">
-          <Text className="mx-4 text-center">
-            <h2>WeebList</h2>
-            <p>ASDASD</p>
-            <a
-              href="https://weeb-list.vercel.app/"
-              target={"_blank"}
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <Button className="icon-pink">
-                GO
-                <AiOutlineArrowRight size={42} />
-              </Button>
-            </a>
-          </Text>
-          <img
-            className="img-fluid img"
-            src="./projects/Weeblist.png"
-            alt="WeebList"
+    <div
+      ref={projectsRef}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <Section>
+        <h2 className="align-self-center">PROJECTS</h2>
+        <div className="d-flex flex-wrap justify-content-center">
+          <FlipCard
+            title={"Anime Searcher"}
+            description={
+              "A complete browser for anime series, manga, characters and voice actors. from the anime industry, you can bookmark it and order it for rank in a top."
+            }
+            img={"weeblist"}
+            href="https://weeb-list.vercel.app/"
+            tasks={[
+              "Anime series searching",
+              "Manga series searching",
+              "Japanese characters searching",
+              "Japanese voice actors searching",
+              "Favorites list",
+              "Draggable favorites order",
+            ]}
           />
-        </Card7o>
-        <Card7o className="col-10 col-md-5 mycard cyan-color2">
-          <Text className="mx-4 text-center">
-            <h2>WeebList</h2>
-            <p>ASDASD</p>
-            <Button className="icon-cyan">
-              GO
-              <AiOutlineArrowRight size={42} />
-            </Button>
-          </Text>
-          <img
-            className="img-fluid img"
-            src="./projects/Weeblist.png"
-            alt="WeebList"
+          <FlipCard
+            title={"Math Quiz"}
+            description={"ASDASD"}
+            img={"weeblist"}
+            href="https://weeb-list.vercel.app/"
+            tasks={[
+              "Anime series searching",
+              "Manga series searching",
+              "Japanese characters searching",
+              "Japanese voice actors searching",
+              "Favorites list",
+              "Draggable favorites order",
+            ]}
           />
-        </Card7o>
-        <Card7o className="col-10 col-md-5 mycard  pink-color2">
-          <Text className="mx-4 text-center">
-            <h2>WeebList</h2>
-            <p>ASDASD</p>
-            <Button className="icon-pink">
-              GO
-              <AiOutlineArrowRight size={42} />
-            </Button>
-          </Text>
-          <img
-            className="img-fluid img"
-            src="./projects/Weeblist.png"
-            alt="WeebList"
+          <FlipCard
+            title={"Pokemon App"}
+            description={"ASDASD"}
+            img={"weeblist"}
+            href="https://weeb-list.vercel.app/"
+            tasks={[
+              "Anime series searching",
+              "Manga series searching",
+              "Japanese characters searching",
+              "Japanese voice actors searching",
+              "Favorites list",
+              "Draggable favorites order",
+            ]}
           />
-        </Card7o>
-        <Card7o className="col-10 col-md-5 mycard cyan-color2">
-          <Text className="mx-4 text-center">
-            <h2>WeebList</h2>
-            <p>ASDASD</p>
-            <Button className="icon-cyan">
-              GO
-              <AiOutlineArrowRight size={42} />
-            </Button>
-          </Text>
-          <img
-            className="img-fluid img"
-            src="./projects/Weeblist.png"
-            alt="WeebList"
+          <FlipCard
+            title={"NASA App"}
+            description={"ASDASD"}
+            img={"weeblist"}
+            href="https://weeb-list.vercel.app/"
+            tasks={[
+              "Anime series searching",
+              "Manga series searching",
+              "Japanese characters searching",
+              "Japanese voice actors searching",
+              "Favorites list",
+              "Draggable favorites order",
+            ]}
           />
-        </Card7o>
-      </div>
-    </Section>
+        </div>
+      </Section>
+    </div>
   );
 };
 

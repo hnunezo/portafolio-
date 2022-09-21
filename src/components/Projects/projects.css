@@ -2,10 +2,6 @@
   width: 20rem;
 }
 
-.mycard {
-  display: flex;
-  justify-content: space-between;
-}
 .pink-color2 {
   border-left: solid 5px #e31b6d;
 }

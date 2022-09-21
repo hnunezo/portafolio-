@@ -1,7 +1,6 @@
 import "./footer.css";
 import { FaAngleUp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
@@ -32,13 +31,6 @@ const Footer = () => {
             <FaLinkedin size={50} className="icon-link" />
           </a>
           <a
-            href="https://www.instagram.com/pechohot/"
-            target={"_blank"}
-            rel="noreferrer"
-          >
-            <FaInstagram size={50} className="icon-link" />
-          </a>
-          <a
             href="mailto: hector.nunez.oviedo@gmail.com"
             target={"_blank"}
             rel="noreferrer"
@@ -47,7 +39,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <h2 className="lead">@HéctorNúñez</h2>
+        <h2 className="lead">HéctorNúñez ©2021-2022</h2>
       </div>
     </div>
   );

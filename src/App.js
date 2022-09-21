@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
-import Moreme from "./components/MoreMe/Moreme";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Contact from "./components/Contact/Contact";
@@ -15,6 +14,9 @@ const App = () => {
   const homeRef = useRef();
   const navRef = useRef();
   const aboutRef = useRef();
+  const skillsRef = useRef();
+  const projectsRef = useRef();
+  const contactRef = useRef();
 
   return (
     <div>
@@ -36,7 +38,14 @@ const App = () => {
           onClick={() => navRef.current.scrollIntoView()}
         ></i>
       </div>
-      <NavbarHome navRef={navRef} homeRef={homeRef} aboutRef={aboutRef} />
+      <NavbarHome
+        navRef={navRef}
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
 
       <div
         style={{
@@ -47,10 +56,9 @@ const App = () => {
         }}
       >
         <About aboutRef={aboutRef} />
-        <Skills />
-        <Projects />
-        <Moreme />
-        <Contact />
+        <Skills skillsRef={skillsRef} />
+        <Projects projectsRef={projectsRef} />
+        <Contact contactRef={contactRef} />
       </div>
       <Footer />
     </div>

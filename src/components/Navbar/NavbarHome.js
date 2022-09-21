@@ -1,7 +1,14 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./navstyles.css";
 
-const NavbarHome = ({ navRef, homeRef, aboutRef }) => {
+const NavbarHome = ({
+  navRef,
+  homeRef,
+  aboutRef,
+  skillsRef,
+  projectsRef,
+  contactRef,
+}) => {
   return (
     <div
       style={{
@@ -23,13 +30,22 @@ const NavbarHome = ({ navRef, homeRef, aboutRef }) => {
             >
               <p className="link">ABOUT</p>
             </Nav.Link>
-            <Nav.Link href="#skills" className="link">
+            <Nav.Link
+              className="link"
+              onClick={() => skillsRef.current.scrollIntoView()}
+            >
               <p className="link">SKILLS</p>
             </Nav.Link>
-            <Nav.Link href="#projects" className="link">
+            <Nav.Link
+              className="link"
+              onClick={() => projectsRef.current.scrollIntoView()}
+            >
               <p className="link">PROJECTS</p>
             </Nav.Link>
-            <Nav.Link href="#contact" className="link">
+            <Nav.Link
+              className="link"
+              onClick={() => contactRef.current.scrollIntoView()}
+            >
               <p className="link">CONTACT</p>
             </Nav.Link>
           </Nav>

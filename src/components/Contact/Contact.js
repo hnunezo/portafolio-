@@ -5,7 +5,7 @@ import "./contact.css";
 import { useDispatch } from "react-redux";
 import { reset } from "../../state/formSlice";
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
   const form = useRef();
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="section-contact">
+    <div className="section-contact" ref={contactRef}>
       <h2 className="align-self-center text-light">CONTACT</h2>
       <form
         ref={form}
