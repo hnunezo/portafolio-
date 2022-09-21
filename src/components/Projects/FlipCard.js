@@ -20,7 +20,7 @@ const FlipCard = ({ title, description, img, href, tasks }) => {
           >
             <Card.Img
               alt={`${img}.png`}
-              src={`./public/projects/${img}.png`}
+              src={require(`../../assets/img/${img}.png`)}
               className="img-card"
             />
             <div className="text-card">
