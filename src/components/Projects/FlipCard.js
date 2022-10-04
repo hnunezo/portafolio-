@@ -33,11 +33,20 @@ const FlipCard = ({ title, description, img, href, tasks }) => {
             className="flip-card-back cyan-color2"
             onClick={() => setFlipped(false)}
           >
-            <Card.Body>
+            <Card.Body
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <p>{description}</p>
               <ul>
                 {tasks.map((el, i) => (
-                  <li key={i}>{el}</li>
+                  <li key={i} className={"text-start"}>
+                    {el}
+                  </li>
                 ))}
               </ul>
             </Card.Body>

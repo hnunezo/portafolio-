@@ -29,17 +29,15 @@ const Projects = ({ projectsRef }) => {
             ]}
           />
           <FlipCard
-            title={"Math Quiz"}
-            description={"ASDASD"}
-            img={"weeblist"}
-            href="https://weeb-list.vercel.app/"
+            title={"Mathgram"}
+            description={
+              "A simple math-quiz app for exercises your logical skills."
+            }
+            img={"mathgram"}
+            href="https://mathgram.vercel.app/"
             tasks={[
-              "Anime series searching",
-              "Manga series searching",
-              "Japanese characters searching",
-              "Japanese voice actors searching",
-              "Favorites list",
-              "Draggable favorites order",
+              "Solve math exercises for practice.",
+              "Evaluate yourself with percentages to pass each exam.",
             ]}
           />
           <FlipCard
