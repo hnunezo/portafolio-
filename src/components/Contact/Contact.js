@@ -13,8 +13,8 @@ const Contact = ({ contactRef }) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_va6cnim",
-        "template_24td2r1",
+        "service_tdopazp",
+        "template_i5b2t8q",
         form.current,
         "4hhZQ1w3snYi_0eUe"
       )

@@ -13,22 +13,6 @@ const Projects = ({ projectsRef }) => {
         <h2 className="align-self-center">PROJECTS</h2>
         <div className="d-flex flex-wrap justify-content-center">
           <FlipCard
-            title={"WeebList"}
-            description={
-              "A complete browser for anime series, manga, characters and voice actors. from the anime industry, you can bookmark it and order it for rank in a top."
-            }
-            img={"weeblist"}
-            href="https://weeb-list.vercel.app/"
-            tasks={[
-              "Anime series searching",
-              "Manga series searching",
-              "Japanese characters searching",
-              "Japanese voice actors searching",
-              "Favorites list",
-              "Draggable favorites order",
-            ]}
-          />
-          <FlipCard
             title={"Mathgram"}
             description={
               "A simple math-quiz app for exercises your logical skills."
@@ -50,6 +34,22 @@ const Projects = ({ projectsRef }) => {
               "Form your team",
               "Fill the pokedex",
               "Save your pokemons on PC",
+            ]}
+          />
+          <FlipCard
+            title={"WeebList"}
+            description={
+              "A complete browser for anime series, manga, characters and voice actors. from the anime industry, you can bookmark it and order it for rank in a top."
+            }
+            img={"weeblist"}
+            href="https://weeb-list.vercel.app/"
+            tasks={[
+              "Anime series searching",
+              "Manga series searching",
+              "Japanese characters searching",
+              "Japanese voice actors searching",
+              "Favorites list",
+              "Draggable favorites order",
             ]}
           />
           <FlipCard
