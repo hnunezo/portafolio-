@@ -5,7 +5,14 @@ import Toogle from "../Switch/Toogle";
 
 const Skills = ({ skillsRef }) => {
   const [flipped, setFlipped] = useState(false);
-  const skills = ["javascript", "typescript", "git", "npm", "stackoverflow"];
+  const skills = [
+    "javascript",
+    "typescript",
+    "git",
+    "npm",
+    "stackoverflow",
+    "docker",
+  ];
   const skillsFrontArray = ["html", "css", "react", "redux", "bootstrap"];
   const skillsBackArray = [
     "node",
@@ -30,7 +37,7 @@ const Skills = ({ skillsRef }) => {
           <h4>GENERAL</h4>
           <div
             className="d-flex justify-content-center align-items-center flex-wrap"
-            style={{ gap: "6rem" }}
+            style={{ gap: "6rem", width: "70%" }}
           >
             {skills.map((el) => (
               <div
