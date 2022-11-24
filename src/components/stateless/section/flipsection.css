@@ -1,7 +1,7 @@
 .section-relative {
   width: 120%;
   height: 200%;
-  margin-top: 5rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 .flip-section {
   position: relative;
   background-color: white;
-  width: 100%;
+  width: 50%;
   height: 100%;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   border: none;

@@ -13,7 +13,14 @@ const Skills = ({ skillsRef }) => {
     "stackoverflow",
     "docker",
   ];
-  const skillsFrontArray = ["html", "css", "react", "redux", "bootstrap"];
+  const skillsFrontArray = [
+    "html",
+    "css",
+    "react",
+    "redux",
+    "bootstrap",
+    "sass",
+  ];
   const skillsBackArray = [
     "node",
     "express",
