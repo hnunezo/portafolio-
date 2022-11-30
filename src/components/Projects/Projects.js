@@ -11,7 +11,7 @@ const Projects = ({ projectsRef }) => {
     >
       <Section>
         <h2 className="align-self-center">PROJECTS</h2>
-        <div className="d-flex flex-wrap justify-content-center">
+        <div className="d-flex flex-wrap justify-content-center gap-5">
           <FlipCard
             title={"Mathgram"}
             description={

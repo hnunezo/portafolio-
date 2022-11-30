@@ -8,7 +8,7 @@ import "./projects.css";
 const FlipCard = ({ title, description, img, href, tasks }) => {
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="div-relative m-5">
+    <div className="div-relative">
       <Card className="flip-card">
         <div
           className="flip-card-inner"
