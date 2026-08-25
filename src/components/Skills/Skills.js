@@ -1,89 +1,77 @@
-import React, { useState } from "react";
-import FlipSection from "../stateless/section/FlipSection";
 import Section from "../stateless/section/Section";
-import Toogle from "../Switch/Toogle";
+import "./skills.css";
+
+const groups = [
+  {
+    title: "Backend",
+    items: [
+      { label: "Java", logo: "java" },
+      { label: "Spring Boot", logo: "spring" },
+      { label: "JPA/Hibernate", logo: "hibernate" },
+      { label: "REST APIs", logo: "rest" },
+      { label: "RabbitMQ", logo: "rabbitmq" },
+    ],
+  },
+  {
+    title: "Frontend",
+    items: [
+      { label: "Angular", logo: "angular" },
+      { label: "TypeScript", logo: "typescript" },
+      { label: "RxJS", logo: "rxjs" },
+      { label: "HTML", logo: "html" },
+      { label: "Sass", logo: "sass" },
+    ],
+  },
+  {
+    title: "Data",
+    items: [
+      { label: "PostgreSQL", logo: "postgres" },
+      { label: "SQL Server", logo: "sqlserver" },
+    ],
+  },
+  {
+    title: "Tools & delivery",
+    items: [
+      { label: "Git", logo: "git" },
+      { label: "Maven", logo: "maven" },
+      { label: "Docker", logo: "docker" },
+      { label: "Flyway", logo: "flyway" },
+      { label: "Azure DevOps", logo: "azure" },
+    ],
+  },
+  {
+    title: "Testing",
+    items: [
+      { label: "Karma", logo: "karma" },
+      { label: "Jasmine", logo: "jasmine" },
+      { label: "Cypress", logo: "cypress" },
+    ],
+  },
+];
 
 const Skills = ({ skillsRef }) => {
-  const [flipped, setFlipped] = useState(false);
-  const skills = [
-    "javascript",
-    "typescript",
-    "git",
-    "npm",
-    "stackoverflow",
-    "docker",
-    "maven",
-    "azure",
-  ];
-  const skillsFrontArray = [
-    "html",
-    "css",
-    "react",
-    "redux",
-    "bootstrap",
-    "sass",
-    "angular",
-    "rxjs",
-  ];
-  const skillsBackArray = [
-    "node",
-    "express",
-    "mongoDB",
-    "mongoose",
-    "jsonWebToken",
-    "java",
-    "spring",
-    "postgres",
-    "rabbitmq",
-    "hibernate",
-  ];
   return (
-    <div
-      ref={skillsRef}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div ref={skillsRef} id="skills" className="skills-wrap">
       <Section>
-        <div className="d-flex flex-column align-items-center gap-3">
-          <h2>SKILLS</h2>
-          <h4>GENERAL</h4>
-          <div
-            className="d-flex justify-content-center align-items-center flex-wrap"
-            style={{ gap: "6rem", width: "70%" }}
-          >
-            {skills.map((el) => (
-              <div
-                key={el}
-                className="d-flex flex-column justify-content align-items-center"
-              >
-                <img
-                  src={`./logos/${el}.png`}
-                  style={{ width: "7rem" }}
-                  alt="xd"
-                />
-                <h3>{el.charAt(0).toUpperCase() + el.slice(1)}</h3>
+        <h2 className="skills-title">SKILLS</h2>
+        <div className="skills-groups">
+          {groups.map((group) => (
+            <div key={group.title} className="skills-group">
+              <h3>{group.title}</h3>
+              <div className="skills-chips">
+                {group.items.map((item) => (
+                  <div key={item.label} className="skill-chip" tabIndex={0}>
+                    <img
+                      src={`./logos/${item.logo}.png`}
+                      alt=""
+                      loading="lazy"
+                    />
+                    <span>{item.label}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-      <Section>
-        <div
-          className="d-flex flex-column align-items-center gap-3"
-          style={{ marginTop: "-10rem" }}
-        >
-          <h4>SPECIFICS</h4>
-          <Toogle flipped={flipped} setFlipped={setFlipped} />
-          <FlipSection
-            flipped={flipped}
-            setFlipped={setFlipped}
-            skillsFrontArray={skillsFrontArray}
-            skillsBackArray={skillsBackArray}
-          />
+            </div>
+          ))}
         </div>
       </Section>
     </div>

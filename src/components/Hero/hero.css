@@ -1,36 +1,108 @@
-.title {
-  font-size: 6rem;
-  font-weight: bold;
-}
-
 .hero-container {
   position: absolute;
   width: 100%;
+  max-width: 52rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-copy {
+  text-align: center;
+  pointer-events: auto;
+}
+
+.hero-name {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  font-weight: 700;
+  color: #e31b6d;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.hero-role {
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  font-weight: 600;
+  color: #04c2c9;
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.hero-pitch {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+  margin: 0 auto 0.85rem;
+  max-width: 40rem;
+}
+
+.hero-meta {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.hero-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0.35rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-btn-primary {
+  background: #e31b6d;
+  color: #fff;
+  border-color: #e31b6d;
+}
+
+.hero-btn-primary:hover {
+  background: #ff3d82;
+  border-color: #ff3d82;
+  color: #fff;
+}
+
+.hero-btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #04c2c9;
+}
+
+.hero-btn-secondary:hover {
+  background: #04c2c9;
+  color: #000;
+}
+
+.hero-btn-ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-btn-ghost:hover {
+  border-color: #e31b6d;
   color: #e31b6d;
 }
 
-.name {
-  margin-right: 20rem;
-}
-
-.title-container {
-  display: flex;
-  flex-direction: row;
-}
-
-@media (max-width: 1200px) {
-  .hero-container {
-    text-align: center;
-  }
-
-  .title-container {
+@media (max-width: 600px) {
+  .hero-actions {
     flex-direction: column;
-  }
-  .title {
-    font-size: 4rem;
-    margin-right: 0;
+    align-items: stretch;
   }
 }

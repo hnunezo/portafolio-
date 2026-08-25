@@ -1,3 +1,28 @@
-.icon-fa {
-  margin: 1rem 0 1rem 0;
+.about-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-title {
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-content {
+  width: min(100%, 42rem);
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #1b242f;
+  margin-bottom: 1rem;
+}
+
+.about-personal {
+  color: #6b7280 !important;
+  font-size: 0.98rem !important;
+  font-weight: 600;
 }

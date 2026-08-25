@@ -4,6 +4,7 @@ import ParticlesBackground from "./components/Particles/ParticlesBackground";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./components/About/About";
+import Experience from "./components/Experience/Experience";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/footer/Footer";
@@ -14,6 +15,7 @@ const App = () => {
   const homeRef = useRef();
   const navRef = useRef();
   const aboutRef = useRef();
+  const experienceRef = useRef();
   const skillsRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
@@ -21,7 +23,7 @@ const App = () => {
   return (
     <div>
       <div
-        className="w-100"
+        className="w-100 hero-stage"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -30,18 +32,19 @@ const App = () => {
         }}
       >
         <ParticlesBackground homeRef={homeRef} />
-        <Hero />
+        <Hero experienceRef={experienceRef} contactRef={contactRef} />
       </div>
       <div>
         <i
           className="arrow down button"
-          onClick={() => navRef.current.scrollIntoView()}
+          onClick={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}
         ></i>
       </div>
       <NavbarHome
         navRef={navRef}
         homeRef={homeRef}
         aboutRef={aboutRef}
+        experienceRef={experienceRef}
         skillsRef={skillsRef}
         projectsRef={projectsRef}
         contactRef={contactRef}
@@ -56,6 +59,7 @@ const App = () => {
         }}
       >
         <About aboutRef={aboutRef} />
+        <Experience experienceRef={experienceRef} />
         <Skills skillsRef={skillsRef} />
         <Projects projectsRef={projectsRef} />
         <Contact contactRef={contactRef} />

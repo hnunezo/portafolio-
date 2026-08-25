@@ -5,10 +5,13 @@ const NavbarHome = ({
   navRef,
   homeRef,
   aboutRef,
+  experienceRef,
   skillsRef,
   projectsRef,
   contactRef,
 }) => {
+  const go = (ref) => ref?.current?.scrollIntoView({ behavior: "smooth" });
+
   return (
     <div
       style={{
@@ -20,32 +23,23 @@ const NavbarHome = ({
     >
       <Navbar className={`nav`} variant="dark" ref={navRef}>
         <Container>
-          <Nav className="mx-auto">
-            <Nav.Link onClick={() => homeRef.current.scrollIntoView()}>
+          <Nav className="mx-auto flex-wrap justify-content-center">
+            <Nav.Link onClick={() => go(homeRef)}>
               <p className="link">HOME</p>
             </Nav.Link>
-            <Nav.Link
-              className="link"
-              onClick={() => aboutRef.current.scrollIntoView()}
-            >
+            <Nav.Link onClick={() => go(aboutRef)}>
               <p className="link">ABOUT</p>
             </Nav.Link>
-            <Nav.Link
-              className="link"
-              onClick={() => skillsRef.current.scrollIntoView()}
-            >
+            <Nav.Link onClick={() => go(experienceRef)}>
+              <p className="link">EXPERIENCE</p>
+            </Nav.Link>
+            <Nav.Link onClick={() => go(skillsRef)}>
               <p className="link">SKILLS</p>
             </Nav.Link>
-            <Nav.Link
-              className="link"
-              onClick={() => projectsRef.current.scrollIntoView()}
-            >
+            <Nav.Link onClick={() => go(projectsRef)}>
               <p className="link">PROJECTS</p>
             </Nav.Link>
-            <Nav.Link
-              className="link"
-              onClick={() => contactRef.current.scrollIntoView()}
-            >
+            <Nav.Link onClick={() => go(contactRef)}>
               <p className="link">CONTACT</p>
             </Nav.Link>
           </Nav>

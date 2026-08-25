@@ -1,0 +1,86 @@
+.experience-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.experience-title {
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: min(100%, 48rem);
+}
+
+.experience-card {
+  background: #1b242f;
+  color: #f4f6f8;
+  padding: 1.75rem 1.5rem;
+  border-left: 4px solid #e31b6d;
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.experience-card:nth-child(even) {
+  border-left-color: #04c2c9;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.experience-header h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.experience-role {
+  color: #04c2c9;
+  font-weight: 600;
+  margin: 0;
+}
+
+.experience-period {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.experience-summary {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.experience-tech {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-tech li {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(4, 194, 201, 0.35);
+  color: #04c2c9;
+}
+
+@media (max-width: 640px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}

@@ -4,6 +4,13 @@
   position: absolute;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hero-stage {
+  position: relative;
+  min-height: 100vh;
 }
 
 .arrow {

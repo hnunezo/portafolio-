@@ -1,0 +1,109 @@
+.skills-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.skills-title {
+  align-self: center;
+  margin-bottom: 1.75rem;
+}
+
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.15rem;
+  width: min(100%, 60rem);
+}
+
+.skills-group {
+  background: #fff;
+  border-top: 3px solid #e31b6d;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 1rem 0.85rem 1.1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skills-group:nth-child(even) {
+  border-top-color: #04c2c9;
+}
+
+.skills-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 12px 22px rgba(0, 0, 0, 0.16);
+}
+
+.skills-group h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1b242f;
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.skills-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 0.4rem;
+  cursor: default;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.skill-chip img {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.skill-chip span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.2;
+}
+
+.skill-chip:hover,
+.skill-chip:focus-visible {
+  background: rgba(227, 27, 109, 0.08);
+  transform: translateX(3px);
+  outline: none;
+}
+
+.skills-group:nth-child(even) .skill-chip:hover,
+.skills-group:nth-child(even) .skill-chip:focus-visible {
+  background: rgba(4, 194, 201, 0.12);
+}
+
+.skill-chip:hover img,
+.skill-chip:focus-visible img {
+  transform: scale(1.12);
+}
+
+@media (max-width: 1100px) {
+  .skills-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-chips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+  }
+}

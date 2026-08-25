@@ -1,68 +1,82 @@
-import React from "react";
 import Section from "../stateless/section/Section";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import "./projects.css";
-import FlipCard from "./FlipCard";
+
+const projects = [
+  {
+    title: "WeebList",
+    description:
+      "Browser for anime, manga, characters and voice actors — with favorites and a draggable ranking list.",
+    img: "weeblist",
+    href: "https://weeb-list.vercel.app/",
+    tags: ["Search", "Favorites", "Drag & drop"],
+  },
+  {
+    title: "NASA App",
+    description:
+      "Explore space imagery: daily photo with context, random discovery and custom image search.",
+    img: "nasaapp",
+    href: "https://nasa-app-iota.vercel.app/",
+    tags: ["NASA API", "Search", "Daily image"],
+  },
+  {
+    title: "Pokémon App",
+    description:
+      "Catch wild Pokémon, build a team, fill the Pokédex and store creatures on the PC.",
+    img: "poke-app",
+    href: "https://poke-app-eight-pi.vercel.app/",
+    tags: ["Teams", "Pokédex", "Storage"],
+  },
+  {
+    title: "Mathgram",
+    description:
+      "Math quiz app to practice logic and track progress with pass percentages per exam.",
+    img: "mathgram",
+    href: "https://mathgram.vercel.app/",
+    tags: ["Quizzes", "Scoring"],
+  },
+];
 
 const Projects = ({ projectsRef }) => {
   return (
-    <div
-      ref={projectsRef}
-      style={{ display: "flex", justifyContent: "center" }}
-    >
+    <div ref={projectsRef} id="projects" className="projects-wrap">
       <Section>
-        <h2 className="align-self-center">PROJECTS</h2>
-        <div className="d-flex flex-wrap justify-content-center gap-5">
-          <FlipCard
-            title={"Mathgram"}
-            description={
-              "A simple math-quiz app for exercises your logical skills."
-            }
-            img={"mathgram"}
-            href="https://mathgram.vercel.app/"
-            tasks={[
-              "Solve math exercises for practice",
-              "Evaluate yourself with percentages to pass each exam",
-            ]}
-          />
-          <FlipCard
-            title={"Pokemon App"}
-            description={"Be the trainer you always wanted to be!"}
-            img={"poke-app"}
-            href="https://poke-app-eight-pi.vercel.app/"
-            tasks={[
-              "Catch wilds pokemon",
-              "Form your team",
-              "Fill the pokedex",
-              "Save your pokemons on PC",
-            ]}
-          />
-          <FlipCard
-            title={"WeebList"}
-            description={
-              "A complete browser for anime series, manga, characters and voice actors. from the anime industry, you can bookmark it and order it for rank in a top."
-            }
-            img={"weeblist"}
-            href="https://weeb-list.vercel.app/"
-            tasks={[
-              "Anime series searching",
-              "Manga series searching",
-              "Japanese characters searching",
-              "Japanese voice actors searching",
-              "Favorites list",
-              "Draggable favorites order",
-            ]}
-          />
-          <FlipCard
-            title={"NASA App"}
-            description={"Discover the universe in a fun way!"}
-            img={"nasaapp"}
-            href="https://nasa-app-iota.vercel.app/"
-            tasks={[
-              "Discover incredible images of the universe, with the random function",
-              "Daily image of the universe with the story behind",
-              "Perform custom searches to deliver related images and find out how they were taken",
-            ]}
-          />
+        <h2 className="projects-title">PROJECTS</h2>
+        <p className="projects-kicker">Personal side projects</p>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className={`project-card ${
+                index % 2 === 0 ? "project-card--pink" : "project-card--cyan"
+              }`}
+            >
+              <div className="project-media">
+                <img
+                  src={require(`../../assets/img/${project.img}.png`)}
+                  alt={project.title}
+                />
+              </div>
+              <div className="project-body">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <ul className="project-tags">
+                  {project.tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  View project
+                  <AiOutlineArrowRight size={18} />
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </Section>
     </div>
