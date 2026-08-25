@@ -12,6 +12,8 @@ const Skills = ({ skillsRef }) => {
     "npm",
     "stackoverflow",
     "docker",
+    "maven",
+    "azure",
   ];
   const skillsFrontArray = [
     "html",
@@ -20,6 +22,8 @@ const Skills = ({ skillsRef }) => {
     "redux",
     "bootstrap",
     "sass",
+    "angular",
+    "rxjs",
   ];
   const skillsBackArray = [
     "node",
@@ -27,6 +31,11 @@ const Skills = ({ skillsRef }) => {
     "mongoDB",
     "mongoose",
     "jsonWebToken",
+    "java",
+    "spring",
+    "postgres",
+    "rabbitmq",
+    "hibernate",
   ];
   return (
     <div
