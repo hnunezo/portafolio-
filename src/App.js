@@ -32,7 +32,7 @@ const App = () => {
         }}
       >
         <ParticlesBackground homeRef={homeRef} />
-        <Hero experienceRef={experienceRef} contactRef={contactRef} />
+        <Hero />
       </div>
       <div>
         <i

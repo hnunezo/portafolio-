@@ -1,50 +1,18 @@
 import Section from "../stateless/section/Section";
+import { useLanguage } from "../../i18n/LanguageContext";
+import { experienceTech } from "../../i18n/translations";
 import "./experience.css";
 
-const roles = [
-  {
-    company: "Lexflow — MINVU",
-    title: "Full Stack Developer",
-    period: "2023–2026",
-    summary:
-      "Developed enterprise modules for case management, work queues, requests, electronic signatures and reporting. Designed an auditing system from scratch, implemented asynchronous workflows with RabbitMQ and integrated external document and identity services in a multitenant architecture.",
-    tech: [
-      "Java",
-      "Spring Boot",
-      "Angular",
-      "PostgreSQL",
-      "RabbitMQ",
-      "Hibernate",
-      "Flyway",
-      "Docker",
-      "Azure DevOps",
-    ],
-  },
-  {
-    company: "UNIJUD — Poder Judicial",
-    title: "Full Stack Developer",
-    period: "Professional engagement",
-    summary:
-      "Contributed to judicial information systems with a focus on integrations with the Corte Suprema, auditing capabilities and asynchronous messaging. Supported reliable data exchange and operational workflows in a regulated institutional environment—presented here as a professional case study without confidential details.",
-    tech: [
-      "Java",
-      "Spring Boot",
-      "Angular",
-      "PostgreSQL",
-      "RabbitMQ",
-      "REST APIs",
-      "Hibernate",
-    ],
-  },
-];
-
 const Experience = ({ experienceRef }) => {
+  const { dict } = useLanguage();
+  const roles = dict.experience.roles;
+
   return (
     <div ref={experienceRef} id="experience" className="experience-wrap">
       <Section>
-        <h2 className="experience-title">EXPERIENCE</h2>
+        <h2 className="experience-title">{dict.experience.title}</h2>
         <div className="experience-list">
-          {roles.map((role) => (
+          {roles.map((role, index) => (
             <article key={role.company} className="experience-card">
               <header className="experience-header">
                 <div>
@@ -55,7 +23,7 @@ const Experience = ({ experienceRef }) => {
               </header>
               <p className="experience-summary">{role.summary}</p>
               <ul className="experience-tech">
-                {role.tech.map((item) => (
+                {experienceTech[index].map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

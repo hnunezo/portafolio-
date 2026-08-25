@@ -4,10 +4,12 @@ import InputStyled from "../stateless/input/InputStyled";
 import "./contact.css";
 import { useDispatch } from "react-redux";
 import { reset } from "../../state/formSlice";
+import { useLanguage } from "../../i18n/LanguageContext";
 
 const Contact = ({ contactRef }) => {
   const form = useRef();
   const dispatch = useDispatch();
+  const { t } = useLanguage();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ const Contact = ({ contactRef }) => {
         "4hhZQ1w3snYi_0eUe"
       )
       .then(
-        (result) => {
+        () => {
           dispatch(reset());
           form.current.reset();
         },
@@ -28,9 +30,10 @@ const Contact = ({ contactRef }) => {
         }
       );
   };
+
   return (
-    <div className="section-contact" ref={contactRef}>
-      <h2 className="align-self-center text-light">CONTACT</h2>
+    <div className="section-contact" ref={contactRef} id="contact">
+      <h2 className="align-self-center text-light">{t("contact.title")}</h2>
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -40,16 +43,16 @@ const Contact = ({ contactRef }) => {
           width: "50%",
         }}
       >
-        <InputStyled type={"text"} name="name" />
-        <InputStyled type={"email"} name="email" />
-        <InputStyled type={"textarea"} name="message" />
+        <InputStyled type="text" name="name" label={t("contact.name")} />
+        <InputStyled type="email" name="email" label={t("contact.email")} />
+        <InputStyled
+          type="textarea"
+          name="message"
+          label={t("contact.message")}
+        />
 
-        <button
-          type="submit"
-          required
-          className="align-self-center buttonForm btn-2"
-        >
-          Send
+        <button type="submit" className="align-self-center buttonForm btn-2">
+          {t("contact.send")}
         </button>
       </form>
     </div>

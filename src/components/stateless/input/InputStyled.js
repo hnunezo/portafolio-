@@ -3,9 +3,11 @@ import "./input.css";
 import { setMail, setMessage, setUsername } from "../../../state/formSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const InputStyled = ({ type, name }) => {
+const InputStyled = ({ type, name, label }) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.form);
+  const displayLabel = label || name.charAt(0).toUpperCase() + name.slice(1);
+
   return (
     <div>
       {name === "name" ? (
@@ -22,7 +24,7 @@ const InputStyled = ({ type, name }) => {
               state.username === "" ? "input-label" : "input-label transform"
             }
           >
-            {name.charAt(0).toUpperCase() + name.slice(1)}
+            {displayLabel}
           </label>
         </div>
       ) : name === "email" ? (
@@ -39,7 +41,7 @@ const InputStyled = ({ type, name }) => {
               state.mail === "" ? "input-label" : "input-label transform"
             }
           >
-            {name.charAt(0).toUpperCase() + name.slice(1)}
+            {displayLabel}
           </label>
         </div>
       ) : (
@@ -55,8 +57,8 @@ const InputStyled = ({ type, name }) => {
               state.message === "" ? "input-label" : "input-label transform"
             }
           >
-            {name.charAt(0).toUpperCase() + name.slice(1)}
-          </label>{" "}
+            {displayLabel}
+          </label>
         </div>
       )}
     </div>

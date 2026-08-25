@@ -1,20 +1,20 @@
 import Section from "../stateless/section/Section";
+import { useLanguage } from "../../i18n/LanguageContext";
 import "./about.css";
 
 const About = ({ aboutRef }) => {
+  const { t } = useLanguage();
+
   return (
     <div ref={aboutRef} id="about" className="about-wrap">
       <Section>
-        <h2 className="about-title">ABOUT</h2>
+        <h2 className="about-title">{t("about.title")}</h2>
         <div className="about-content">
           <p>
-            I’m a Computer Engineer and Full Stack Developer based in
-            Concepción, Chile, focused on <strong>legal tech </strong>. My professional experience has been building
-            enterprise systems for the public sector: case management, document
-            workflows, electronic signatures, auditing and integrations with
-            institutional services.
+            {t("about.p1Before")}
+            <strong>{t("about.p1Highlight")}</strong>
+            {t("about.p1After")}
           </p>
-          
         </div>
       </Section>
     </div>
