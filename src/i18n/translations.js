@@ -28,14 +28,14 @@ export const translations = {
         {
           company: "Lexflow — MINVU",
           title: "Full Stack Developer",
-          period: "2023–2026",
+          period: "2025–2026",
           summary:
             "Developed enterprise modules for case management, work queues, requests, electronic signatures and reporting. Designed an auditing system from scratch, implemented asynchronous workflows with RabbitMQ and integrated external document and identity services in a multitenant architecture.",
         },
         {
           company: "UNIJUD — Poder Judicial",
           title: "Full Stack Developer",
-          period: "Professional engagement",
+          period: "2023–2025",
           summary:
             "Contributed to judicial information systems with a focus on integrations with the Corte Suprema, auditing capabilities and asynchronous messaging. Supported reliable data exchange and operational workflows in a regulated institutional environment—presented here as a professional case study without confidential details.",
         },
@@ -105,14 +105,14 @@ export const translations = {
     hero: {
       role: "Desarrollador Full Stack",
       pitch:
-        "Construyo aplicaciones empresariales mantenibles, flujos documentales e integraciones de sistemas. Más de 3 años de experiencia en legal tech / informática jurídica.",
+        "Construyo aplicaciones empresariales mantenibles, flujos documentales e integraciones de sistemas. Más de 3 años de experiencia en informática jurídica.",
       meta: "Chile · Abierto a oportunidades remotas",
     },
     about: {
       title: "SOBRE MÍ",
       p1Before:
         "Soy Ingeniero Civil Informático y Desarrollador Full Stack de Concepción, Chile, enfocado en ",
-      p1Highlight: "legal tech / informática jurídica",
+      p1Highlight: "informática jurídica",
       p1After:
         ". Mi experiencia profesional ha sido construir sistemas empresariales para el sector público: gestión de casos, flujos documentales, firmas electrónicas, auditoría e integraciones con servicios institucionales.",
     },
@@ -122,14 +122,14 @@ export const translations = {
         {
           company: "Lexflow — MINVU",
           title: "Desarrollador Full Stack",
-          period: "2023–2026",
+          period: "2025–2026",
           summary:
             "Desarrollé módulos empresariales de gestión de casos, colas de trabajo, solicitudes, firmas electrónicas y reportes. Diseñé un sistema de auditoría desde cero, implementé flujos asíncronos con RabbitMQ e integré servicios externos de documentos e identidad en una arquitectura multitenant.",
         },
         {
           company: "UNIJUD — Poder Judicial",
           title: "Desarrollador Full Stack",
-          period: "Engagement profesional",
+          period: "2023–2025",
           summary:
             "Contribuí a sistemas de información judicial con foco en integraciones con la Corte Suprema, capacidades de auditoría y mensajería asíncrona. Apoyé el intercambio confiable de datos y flujos operativos en un entorno institucional regulado — presentado aquí como caso de estudio profesional, sin detalles confidenciales.",
         },
